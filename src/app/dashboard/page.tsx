@@ -30,11 +30,11 @@ export default function DashboardPage() {
         // Récupérer les statistiques
         const [statsResponse, revenueResponse] = await Promise.all([
           fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/stats`, {
-            credentials: 'include', // Inclure les cookies
+            credentials: 'include', 
             headers: { 'Content-Type': 'application/json' },
           }),
           fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/revenue-stats`, {
-            credentials: 'include', // Inclure les cookies
+            credentials: 'include',
             headers: { 'Content-Type': 'application/json' },
           })
         ]);

@@ -27,9 +27,7 @@ export default function SitesPage() {
   useEffect(() => {
     const fetchSiteStats = async () => {
       try {
-        const token = localStorage.getItem("admin_token");
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/admin/site-stats`,
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/site-stats`,
           {
             credentials: "include",
             headers: {
